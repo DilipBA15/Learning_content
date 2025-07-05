@@ -1,0 +1,79 @@
+==============================
+     LINUX FILE PERMISSIONS
+==============================
+
+Each file or directory has permissions that control who can read, write, or execute it.
+
+---------------------------------------------------------
+User Categories:
+---------------------------------------------------------
+Owner (u)   - The user who owns the file
+Group (g)   - Other users in the same group
+Others (o)  - Everyone else
+
+---------------------------------------------------------
+Permission Types:
+---------------------------------------------------------
+Read (r)    - Allows viewing the contents of a file or listing a directory
+Write (w)   - Allows modifying a file or adding/removing files in a directory
+Execute (x) - Allows running a file or entering a directory
+
+---------------------------------------------------------
+Numeric Permission Values:
+---------------------------------------------------------
+Read  = 4
+Write = 2
+Execute = 1
+
+Permissions are combined by adding these values:
+
+Example: 7 = 4 + 2 + 1 = read + write + execute
+Example: 6 = 4 + 2 + 0 = read + write
+Example: 5 = 4 + 0 + 1 = read + execute
+Example: 0 = no permission
+
+---------------------------------------------------------
+Common Permission Examples:
+---------------------------------------------------------
+
+chmod 600 file.txt
+- Owner: read + write (6)
+- Group: no permission (0)
+- Others: no permission (0)
+- Use: Private files like SSH private keys
+
+chmod 700 script.sh
+- Owner: read + write + execute (7)
+- Group: no permission (0)
+- Others: no permission (0)
+- Use: Private executable scripts or directories
+
+chmod 755 folder/
+- Owner: read + write + execute (7)
+- Group: read + execute (5)
+- Others: read + execute (5)
+- Use: Public folders or programs to allow others to read and execute but not write
+
+chmod 777 public_folder/
+- Owner: read + write + execute (7)
+- Group: read + write + execute (7)
+- Others: read + write + execute (7)
+- Use: Everyone has full access (usually unsafe)
+
+---------------------------------------------------------
+How to Check Permissions:
+---------------------------------------------------------
+Use the 'ls -l' command:
+
+$ ls -l file.txt
+-rw-r--r-- 1 user group 0 Jul 5 12:00 file.txt
+
+Explanation of the permission string:
+- The first character (-) indicates file type (dash means regular file)
+- Next 3 characters: Owner permissions (r=read, w=write, x=execute)
+- Next 3: Group permissions
+- Last 3: Others permissions
+
+---------------------------------------------------------
+End of file
+---------------------------------------------------------
