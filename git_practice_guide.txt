@@ -1,0 +1,92 @@
+🔧 Git Cheat Sheet (Practice Reference)
+
+🟢 Initial Setup (One-Time Configuration)
+-----------------------------------------
+git config --global user.name "Dilip Kumar"      # Set global username
+git config --global user.email "dilip.kumar@example.com"  # Set global email
+
+📁 Initialize a New Local Repository
+------------------------------------
+git init                                          # Initialize Git in the current directory
+git remote add origin https://github.com/dilipkumar/myrepo.git  # Link to remote repo
+
+🔄 Staging & Committing Changes
+-------------------------------
+git add .                                         # Stage all modified and new files
+git add index.html                                # Stage a specific file
+
+git commit -m "Meaningful commit message"         # Save changes to local repo with message
+
+🚀 Pushing Code to GitHub
+-------------------------
+git push -u origin <branch-name>                  # Push code to remote branch (first time)
+
+💡 Note:
+Default branch is usually 'main' or 'master'.
+Use Personal Access Token (PAT) instead of your GitHub password.
+
+To generate a token:
+GitHub > Settings > Developer Settings > Personal Access Tokens >
+Fine-Grained Tokens > Generate New Token
+- Scope: All Repositories
+- Permission: Content (Read & Write)
+
+🌿 Branching Workflow
+---------------------
+🛠 Create and Work on a New Branch
+git checkout -b login-page                        # Create & switch to a new branch
+
+# After making changes:
+git add .
+git commit -m "Add login page"
+
+🔁 Merge Branch to Main
+git checkout main                                 # Switch back to main branch
+git merge login-page                              # Merge login-page into main
+git push origin main                              # Push merged code to remote
+
+🔍 Branch Management
+--------------------
+git branch                                        # List all local branches
+git branch -d login-page                          # Delete local branch
+git push origin --delete login-page               # Delete remote branch
+
+🧾 Git Logs
+-----------
+git log -1                                        # View the latest commit
+
+🏗 Git Project Hierarchy
+------------------------
+GitHub Repository (Remote)
+└── Local Repository (Your System)
+    ├── Branches (main, login-page, etc.)
+    │   ├── Project Folder (with .git folder)
+    │   │   ├── Folders (/src, /test)
+    │   │   │   └── Files (.java, .html, .json, etc.)
+
+📌 Key Concepts
+---------------
+Term         | Usage/When to Use
+-------------|----------------------------------------------------------
+File         | When creating or modifying code or documents
+Folder       | To organize related files logically
+Project      | Starting any new development work
+Repository   | To track and share code using `git init`
+Branch       | To develop features or fixes separately from main
+Main/Master  | Production-ready, stable code branch
+
+🤝 Collaborating with Others
+----------------------------
+1. Add collaborator in GitHub:
+   Repo > Settings > Collaborators > Invite
+
+2. Collaborator clones repo:
+   git clone https://github.com/DilipBA15/Digital_payment.git
+
+3. Pull latest code:
+   git pull origin main
+
+4. After making changes:
+   git add .
+   git commit -m "Update message"
+   git push origin <branch-name>
