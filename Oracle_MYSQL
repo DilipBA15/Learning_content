@@ -1,0 +1,291 @@
+ORACLE SQL:-
+
+DDL COMMANDS(Data Defination Language):-
+
+     1.create   create table students(rollno number(10),name varchar2(20),age number(20),college varchar2(20));
+
+     2.rename   alter table students rename to studentsdetails; // We can change the name of table by using this command. 
+		// we can't change the name of DB. we have to create another DB and dump the data.
+
+     3.truncate table studentsdetails;
+       
+
+     4.drop     drop table studentsdetails;
+
+     5.alter    alter table studentsdetails add branch varchar2(20);
+                alter table studentsdetails modify name varchar2(15);
+
+DML COMMANDS(Data Manifulation Language):-
+
+     1.insert   insert into studentdetails values (1,'harsha',21,'eluru','mech'); 
+                insert all into studentdetails (rollno,name,age,college) values (1,'harsha',21,'eluru','mech')
+                           into studentdetails (rollno,name,age,college) values (1,'ram',21,'eluru','mech') select 1 from dual;
+
+     2.delete   delete from studentsdetails where name='harsha';
+
+     3.update   update studentsdetails set age=22 where rollno=1;
+
+TCL COMMANDS(Transaction Control Language):-
+
+     1.commit       commit;    
+
+     2.rollback     rollback;
+
+     3.savepoint    savepoint harsha;  
+ 
+DQL COMMANDS(Data Query Languages):-
+
+     1.select      select * from studentsdetails;
+
+DCL CPMMANDS(Data Control Language):-
+
+     1.grant      create user c##harsha identified by 1234;
+                  connect;
+                  enter username:-system
+                  enter passowrd:-1234
+                  grant create session to c##harsha;
+                  grant select,insert,update,delete on harsha to c##harsha;
+                  connect;
+                  enter username:-c##harsha
+                  enter passowrd:-1234
+                  select *n from system.harsha;
+                  insert into system.harsha values (2,"ram",23,"ECE");
+
+     2.revoke     connect;
+                  enter username:-system
+                  enter passowrd:-1234
+                  revoke insert on harsha to c##harsha;
+                  connect;
+                  enter username:-c##harsha
+                  enter passowrd:-1234   
+                  insert into system.harsha values (3,'vinay',23.'CSE');
+                  error
+                  connect;
+                  enter username:-system
+                  enter passowrd:-1234
+
+      3.dropuser  drop user c##harsha;
+                  
+OPERATORS:-
+
+      1.Arthemetic Operator      + addttion            update studentsdetails set age=2+age where rollno=1;
+                                 - substraction        update studentsdetails set age=2-age where rollno=1;
+                                 * multiplication      update studentsdetails set age=2*age where rollno=1;
+                                 / devision            update studentsdetails set age=2/age where rollno=1;
+                                 % module devision     update studentsdetails set age=2%age where rollno=1;
+
+      2.Relational Opeartor      >    greaterthen             select name from studentsdetails where age>20;
+                                 >=   greaterthen equal to    select name from studentsdetails where age>=20;
+                                 <    lessthen                select name from studentsdetails where age<20;
+                                 <=   lessthen equal to       select name from studentsdetails where age<=20;
+                                 =    equal to                select name from studentsdetails where age=20;
+                                 <>,! not equal to            select name from studentsdetails where age<>20;
+                                                              select name from studentsdetails where age!20;
+
+      3.Logical Operator        and            select * from studentsdetails where rollno=1 and age=21;
+                                or             select * from studentsdetails where rollno=1 or age=21;
+                                like           select * from studentsdetails where name like '%ha';
+                                not like       select * from studentsdetails where name not like '%ha';
+                                between        select * from studentsdetails where age between 21 and 30;
+                                not between    select * from studentsdetails where age not between 21 and 30; 
+                                all            select * from studentsdetails where age>all(21,22,23);
+                                any            select * from studentsdetails where age>any(21,22,23);
+                                exists         select * from studentsdetails where exists (select 1 from order where harsha.rollno=order.rollno);
+                                in             select * from studentsdetails where rollno in (1,2,3,4);
+                                some           select * from studentsdetails where age>some(23,21);
+      
+
+FUNCTIONS:-
+
+      1.Aggrigate Functions     min     select min(age) from studentsdetails;
+                                max     select max(age) from studentsdetails;
+                                avg     select avg(age) from studentsdetails;
+                                count   select count(age) from studentsdetails;
+                                sum     select sum(age) from studentsdetails;
+
+      2.Scalar Function         length  select length(harsha) from studentsdetails;  6
+                                round   select round(4.9) from dual;                 5
+                                ceil    select ceil(78.45) from dual;                79
+                                floor   select floor(78.45) from dual;               78
+
+CONSTRAINS:-
+
+      1.PRIMARY KEY        create table studentsdetails(rollno number(10) primary key,name varchar2(20),age number(2));
+
+      2.UNIQUE KEY         create table studentsdetails(rollno number(10) unique,name varchar2(20),age number(2));     
+
+      3.NOT NULL           create table studentsdetails(rollno number(10) not null,name varchar2(20),age number(2));
+
+      4.CHECK              create table stidentsdetails(rollno number(10),name varchar2(20),age number(2),check (age>18));
+
+      5.FOREIGN KEY        create table child(id number(10) primary key,name varchar2(20));
+                           create table parent(id number(10) primary key,age number(10),foreign key(id) references child(id));
+                           select child.id,child.name,parent.age from child c,parent p where c.id=p.id;
+
+JOINS:-
+
+      1.INNER JOIN         select * from child c inner join parent p on c.id=p.id; (matching values)
+      2.LEFT OUTER JOIN    select * from child c left join parent p on c.id=p.id;  (take full left table and 2nd table values)
+      3.RIGHT OUTER JOIN   select * from child c right join parent p on c.id=p.id; (take full right table and 1st table values)
+      4.FULL JOIN          select * from child c full join parent p on c.id=p.id;  (combine two tables)
+      5.CROSS JOIN         select * from child c cross join parent p ;             (cross the all values)
+                           select * from childc,parent p ;
+      6.JOIN 3 TABLES      select * from child c inner join parent p on c.id=p.id inner join teacher t on t.id=p.id inner join relatives r on r.id=t.id where id=1;
+
+ROWNUM:-
+
+      select * from (select * from child order by id) where rownum<2;
+      select * from child where rownum<=2;
+
+COPY DATA:-
+
+      create table children as select * from child;              (copy data values)
+      create table children as select * from child where id=0;   (no data only table)
+      insert into children select * from child where id=1;       (based on condition copy)
+
+CLUSES:-
+   
+     1.FROM        select * from child;
+     2.SET         update child set name='harsha vardhan' where id=1;
+     3.WHERE       select * from child where id=1;
+     4.SELECT      select * from child;
+     5.ORDER BY    select * from child order by name desc;
+     6.GROUP BY    select count(name),name from child group by name;  (it shows how many duplicate values are present)
+     7.HAVING      select count(name),name from child group by name having name='harsha' order by name;
+                   "WHERE" clause filters rows before grouping.
+                   "HAVING" clause filters groups after grouping
+
+VIEW:-
+
+      CREATE TABLE Employees (EmployeeID INT PRIMARY KEY,FirstName VARCHAR(50),LastName VARCHAR(50),Department VARCHAR(50));
+      CREATE VIEW EmployeeDetails AS SELECT EmployeeID, FirstName, LastName, Department FROM Employees;
+
+IDENTITY:-
+
+      1.ALWAYS       create table child(id number(2) generated always as identity,name varchar2(20));       (we can't enter id it will take auto increment)
+
+      2.BY DEFAULT   create table child(id number(2) generated by default as identity,name varchar2(20));   (eighter we can enter id or not it will insert the data)
+
+      3.ON NULL      create table child(id number(2) generated by default on null as identity,name varchar2(20));   (we can insert null values also)
+     
+      4.INCREMENT    create table child(id number(2) generated always as identity start with 5 increment by 5,name varchar2(20));    (increment id values by 5)
+
+
+SET OPEARTOR:-
+
+      1.UNION         	select * from child union select * from children;   (same data types and show all columns)
+
+      2.UNION ALL       select * from child union all select * from children;  (it shows 1st table values after that 2nd table values)
+
+      3.MINUS           select * from child minus select * from children;   (it only shows table 1 values)
+
+      4.INTERSECT       select * from child intersect select * from children;   (it only takes common values from two tables)
+
+INDEX:-
+
+        CREATE TABLE BigTable (ID INT PRIMARY KEY,FirstName VARCHAR(50),LastName VARCHAR(50),Age INT,City VARCHAR(50));
+
+
+        INSERT all INTO BigTable (ID, FirstName, LastName, Age, City) VALUES (1, 'John', 'Doe', 25, 'New York')
+                   INTO BigTable (ID, FirstName, LastName, Age, City) VALUES (2, 'Jane', 'Smith', 30, 'Los Angeles')
+                   INTO BigTable (ID, FirstName, LastName, Age, City) VALUES(3, 'Alice', 'Johnson', 28, 'Chicago')
+                   INTO BigTable (ID, FirstName, LastName, Age, City) VALUES(4, 'lavanya', 'bindhu', 18, 'india')
+        select 1 from dual;
+
+      1.SINGLE COLUMN INDEX                    create index index_city on bigtable(city);
+                                               select * from bigtable where city='india';
+
+      2.UNIQUE INDEX                           create unique index index_firstname on bigtable(firstname);
+                                               INSERT INTO BigTable (ID, FirstName, LastName, Age, City) VALUES (5, 'John', 'Daniel', 25, 'New York');
+                                               error:unique
+
+      3.COMPOSITE INDEX(MULTI COLUMN INDEX)    create index index_idage on bigtable(id,age);
+                                               select * from bigtable where id=4 and age=18;
+
+      4.CLUSTERED INDEX                        create clustered index index_id on bigtable(id);
+                                               select * from bigtable where id=4;
+
+      5.NON CLUSTERED INDEX                    create non clustered index index_lastname on bigtable(lastname);
+                                               select * from bigtable where lastname='smith';
+
+SUB QUERY:-
+
+      1.CORRELATED SUB QUERY
+                                   
+                                   CREATE TABLE Employees (EmployeeID INT PRIMARY KEY,FirstName VARCHAR(50),LastName VARCHAR(50),Department VARCHAR(50),Salary DECIMAL(10, 2));
+
+                                   INSERT ALL INTO Employees (EmployeeID, FirstName, LastName, Department, Salary) VALUES (1, 'John', 'Doe', 'IT', (SELECT AverageSalary FROM EmployeeSalaries WHERE Department = 'IT'))
+                                              INTO Employees (EmployeeID, FirstName, LastName, Department, Salary) VALUES (2, 'Jane', 'Smith', 'HR', (SELECT AverageSalary FROM EmployeeSalaries WHERE Department = 'HR'))
+                                              INTO Employees (EmployeeID, FirstName, LastName, Department, Salary) VALUES (3, 'Bob', 'Johnson', 'Finance', (SELECT AverageSalary FROM EmployeeSalaries WHERE Department = 'Finance')) select 1 from dual;
+
+                                   select * from employees e where salary=(select max(salary) from employees where salary<(select max(salary) from employees));
+
+                                   select * from employees e where salary=(select max(salary) from employees);
+                                                 
+      2.NON CORRELATED SUB QUERY:-
+                                  
+                1.SINGLE ROW SUB QUERY
+
+                                                   select * from employees e where salary=(select max(salary) from employees where salary<(select max(salary) from employees));
+
+                2.MULTIPLE ROW SUB QUERY
+
+                                                   select * from employees e where department in (select department from employees where department='IT');
+
+                3.MULTIPLE COLUMN SUB QUERY
+
+                                                   select * from employees e where salary = (select max(salary) from employees where department=e.department);
+
+                        
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
