@@ -1,0 +1,99 @@
+Step up for Java
+1. Java Development Kit (JDK)
+•	Why: Required to compile and run Java programs.
+•	Version: Use JDK 17 or later (recommended by Spring Boot)
+•	Download:
+➡ Oracle JDK
+➡ OpenJDK (Adoptium)
+•	Install Tips:
+o	After install, set JAVA_HOME:
+bash
+CopyEdit
+setx JAVA_HOME "C:\Program Files\Java\jdk-17"
+setx PATH "%JAVA_HOME%\bin;%PATH%"
+________________________________________
+✅ 2. Visual Studio Code (VS Code)
+•	Why: Your main code editor.
+•	Download:
+➡ VS Code Official Site
+________________________________________
+3. VS Code Extensions for Java
+Install the following from the Extensions marketplace:
+Extension	Why it is needed
+Java Extension Pack	Includes all key Java extensions
+Language Support for Java™	Syntax highlighting, IntelliSense
+Debugger for Java	Debugging Java code
+Maven for Java	Managing dependencies, building
+Spring Boot Extension Pack	Spring Boot project support, run/debug
+Test Runner for Java	Run unit tests
+✅ Install Java Extension Pack — it installs all of the above automatically.
+________________________________________
+✅ 4. Apache Maven
+•	Why: Dependency management and project build tool (used heavily in Spring Boot).
+•	Download:
+➡ Apache Maven Download
+•	Install Tips:
+o	Extract and set environment variables:
+bash
+CopyEdit
+setx M2_HOME "C:\Program Files\Apache\maven-3.9.6"
+setx PATH "%M2_HOME%\bin;%PATH%"
+o	Verify:
+bash
+CopyEdit
+mvn -v
+________________________________________
+✅ 5. Spring Boot CLI (optional)
+•	Why: For scaffolding new Spring Boot projects via terminal.
+•	Download:
+➡ Spring Boot CLI (via SDKMAN)
+•	Windows Tip: It's easier to just generate projects via Spring Initializr.
+________________________________________
+✅ 6. Spring Initializr
+•	Why: Easiest way to create Spring Boot starter project.
+•	Use:
+➡ Spring Initializr (Web)
+Or inside VS Code via the Spring Initializr extension.
+________________________________________
+✅ 7. Build Your Application & Create .JAR File
+Once the project is created and code is ready:
+bash
+CopyEdit
+cd your-project-directory
+mvn clean install
+✅ Output: A .jar file will be generated inside the target/ folder (e.g., your-app-0.0.1-SNAPSHOT.jar).
+To run:
+bash
+CopyEdit
+java -jar target/your-app.jar
+________________________________________
+✅ 8. (Optional) Git
+•	Why: Version control and pushing to GitHub.
+•	Download:
+➡ Git for Windows
+________________________________________
+🧰 Summary Checklist
+Tool	Why Needed	Download Link
+JDK 17+	Compile/run Java	OpenJDK
+
+VS Code	Code editor	VS Code
+
+Java Extension Pack	Java dev support in VS Code	From VS Code Marketplace
+Apache Maven	Build & dependency manager	Maven
+
+Spring Initializr	Create Spring Boot projects	start.spring.io
+
+Git (optional)	Version control	Git
+
+
+
+ 
+Javac <File Name>
+
+Java <File Name> // .java isn't required. 
+
+jar cfm <File Name>.java manifest.txt <File Name>.class // To create the .jar file. 
+
+We can send the .jar file to other person to view the output. If He wants to view the code, He wants to download the de compiler and will be able to view the code. 
+
+dir // To check the file content
