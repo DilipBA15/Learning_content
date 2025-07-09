@@ -1,0 +1,146 @@
+
+==============================
+✅ 1. File & Folder Operations (CMD)
+==============================
+cd             # Change directory
+cd..           # Go up one directory
+dir            # List files and folders
+mkdir Folder   # Create a new folder
+rmdir Folder   # Delete an empty folder
+del file.txt   # Delete a file
+copy file.txt D:\Backup\     # Copy file
+xcopy source destination /s /e   # Copy directory (with subfolders)
+move file.txt D:\Docs\      # Move file
+
+==============================
+✅ 2. System & User Info
+==============================
+hostname
+whoami
+systeminfo
+echo %username%
+echo %userprofile%
+
+==============================
+✅ 3. Networking Commands
+==============================
+ipconfig
+ipconfig /all
+ping google.com
+tracert google.com
+netstat -ano
+nslookup domain.com
+
+==============================
+✅ 4. Task & Process Management
+==============================
+tasklist
+taskkill /PID 1234 /F
+start notepad
+shutdown /s /t 0
+shutdown /r /t 0
+
+==============================
+✅ 5. Disk & File Management
+==============================
+chkdsk C: /f
+sfc /scannow
+diskpart
+
+==============================
+✅ 6. PowerShell Basics
+==============================
+Get-Process
+Get-Service
+Get-Help
+Set-ExecutionPolicy RemoteSigned
+
+==============================
+✅ 7. Windows Shortcuts (Hotkeys)
+==============================
+Win + D   => Show Desktop
+Win + E   => Open File Explorer
+Win + R   => Run Dialog
+Win + X   => Power User Menu
+Ctrl + Shift + Esc => Task Manager
+Alt + Tab => Switch apps
+Win + L   => Lock PC
+Win + I   => Settings
+
+==============================
+✅ 8. Git (if using Git Bash or CMD)
+==============================
+git init
+git clone <repo-url>
+git add .
+git commit -m "message"
+git push origin main
+git pull origin main
+
+==============================
+✅ 9. Java / JAR Commands
+==============================
+java -version
+javac Hello.java
+java Hello
+java -jar app.jar
+
+==============================
+✅ 10. Useful System Tools
+==============================
+msconfig
+services.msc
+regedit
+eventvwr
+cleanmgr
+
+==============================
+✅ Command to See Installed Software (PowerShell)
+==============================
+Get-WmiObject -Class Win32_Product | Measure-Object
+
+# Better alternative
+Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*, `
+HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | `
+Select-Object DisplayName | Where-Object { $_.DisplayName } | Measure-Object
+
+==============================
+✅ Common Commands Between Windows and Linux
+==============================
+cd
+dir (or ls)
+echo
+mkdir
+rmdir
+del (rm in Linux)
+copy (cp in Linux)
+move (mv in Linux)
+ping
+hostname
+whoami
+cls / clear
+exit
+
+==============================
+✅ Installing Software on Windows via Command Line
+==============================
+
+# Using winget
+winget install Google.Chrome
+winget search chrome
+
+# Using Chocolatey (after setup)
+choco install git -y
+choco install googlechrome -y
+
+# Using .exe
+start /wait installer.exe /silent /norestart
+
+# Using .msi
+msiexec /i appname.msi /quiet /norestart
+
+# PowerShell script to install multiple
+$apps = @("Git.Git", "Google.Chrome")
+foreach ($app in $apps) {
+    winget install $app --silent --accept-package-agreements --accept-source-agreements
+}

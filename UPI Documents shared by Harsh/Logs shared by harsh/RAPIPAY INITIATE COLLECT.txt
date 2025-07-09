@@ -1,0 +1,272 @@
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/">
+	<HeadmsgId="RFPa6a7ffd8913649b48dfa8b8d010defa8" orgId="189991" ts="2025-06-10T16:02:34+05:30" ver="2.0"/>
+	<Meta>
+		<Tag name="PAYREQSTART" value="2025-06-10T16:02:34+05:30"/>
+		<Tag name="PAYREQEND" value="2025-06-10T16:02:34+05:30"/>
+	</Meta>
+	<Txn custRef="516116232358" id="RFPLa58e4a0a0a544ee1a7235e336e0e24b" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="823938" refUrl="https://nye.money" ts="2025-06-10T16:02:34+05:30" type="COLLECT">
+		<Rules>
+			<Rule name="EXPIREAFTER" value="1440"/>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="7549180236@ybl" code="0000" name="" seqNum="1" type="PERSON">
+		<Amount curr="INR" value="1.07"/>
+	</Payer>
+	<Payees>
+		<Payee addr="8093150354@nye" code="0000" name="vishwajeet kumar" seqNum="1" type="PERSON">
+			<Info>
+				<Identity id="918093150354" type="ACCOUNT" verifiedName="vishwajeet kumar"/>
+				<Rating verifiedAddress="TRUE"/>
+			</Info>
+			<Device>
+				<Tag name="MOBILE" value="918093150354"/>
+				<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+				<Tag name="ID" value="918093150354"/>
+				<Tag name="OS" value="android"/>
+				<Tag name="IP" value="172.1.1.1"/>
+				<Tag name="APP" value="com.rapipay.nye"/>
+				<Tag name="LOCATION" value="28.6032122-77.3899213"/>
+				<Tag name="TYPE" value="MOB"/>
+				<Tag name="CAPABILITY" value="110010"/>
+			</Device>
+			<Ac addrType="ACCOUNT">
+				<Detail name="ACTYPE" value="PPIWALLET"/>
+				<Detail name="ACNUM" value="918093150354"/>
+				<Detail name="IFSC" value="PPIW0885627"/>
+			</Ac>
+			<Amount curr="INR" value="1.07"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+=======
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="3L92O798CXU" orgId="NPCI" ts="2025-06-10T16:03:06+05:30" ver="2.0"/>
+	<Meta>
+		<Tag name="PAYREQSTART" value="2025-06-10T16:02:34+05:30"/>
+		<Tag name="PAYREQEND" value="2025-06-10T16:02:34+05:30"/>
+	</Meta>
+	<Txn custRef="516116232358" id="RFPLa58e4a0a0a544ee1a7235e336e0e24b" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="823938" refUrl="https://nye.money" subType="COLLECT" ts="2025-06-10T16:02:34+05:30" type="CREDIT">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00206"/>
+		</RiskScores>
+		<Rules>
+			<Rule name="EXPIREAFTER" value="1440"/>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="7549180236@ybl" code="0000" name="VISHWAJEET  KUMAR" seqNum="1" type="PERSON">
+		<Info>
+			<Identity id="00000036409226430" type="ACCOUNT" verifiedName="VISHWAJEET  KUMAR"/>
+			<Rating verifiedAddress="TRUE"/>
+		</Info>
+		<Device>
+			<Tag name="MOBILE" value="917549180236"/>
+			<Tag name="GEOCODE" value="0.000000,0.000000"/>
+			<Tag name="IP" value="2401:4900:a016:3e25:eed4:7e46:8c6c:35f"/>
+			<Tag name="LOCATION" value="DEFAULT"/>
+			<Tag name="TYPE" value="MOB"/>
+			<Tag name="OS" value="Android"/>
+			<Tag name="APP" value="com.phonepe.app"/>
+			<Tag name="CAPABILITY" value="520000020000000560017917549180236"/>
+			<Tag name="ID" value="NJFLFJCPSJWNIYLOC2VNIY4Z60DMTXFRFZZ"/>
+		</Device>
+		<Ac addrType="ACCOUNT">
+			<Detail name="IFSC" value="SBIN0012576"/>
+			<Detail name="ACNUM" value="00000036409226430"/>
+			<Detail name="ACTYPE" value="SAVINGS"/>
+		</Ac>
+		<Amount curr="INR" value="1.07"/>
+	</Payer>
+	<Payees>
+		<Payee addr="8093150354@nye" code="0000" name="vishwajeet kumar" seqNum="1" type="PERSON">
+			<Info>
+				<Identity id="918093150354" type="ACCOUNT" verifiedName="vishwajeet kumar"/>
+				<Rating verifiedAddress="TRUE"/>
+			</Info>
+			<Device>
+				<Tag name="MOBILE" value="918093150354"/>
+				<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+				<Tag name="ID" value="918093150354"/>
+				<Tag name="OS" value="android"/>
+				<Tag name="IP" value="172.1.1.1"/>
+				<Tag name="APP" value="com.rapipay.nye"/>
+				<Tag name="LOCATION" value="28.6032122-77.3899213"/>
+				<Tag name="TYPE" value="MOB"/>
+				<Tag name="CAPABILITY" value="110010"/>
+			</Device>
+			<Ac addrType="ACCOUNT">
+				<Detail name="ACTYPE" value="PPIWALLET"/>
+				<Detail name="ACNUM" value="918093150354"/>
+				<Detail name="IFSC" value="PPIW0885627"/>
+			</Ac>
+			<Amount curr="INR" value="1.07"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+=========
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFPfdb7dcd31f624d2182c21141ff1031a0" orgId="189991" ts="2025-06-10T16:03:07+05:30" ver="2.0"/>
+	<Txn custRef="516116232358" id="RFPLa58e4a0a0a544ee1a7235e336e0e24b" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="823938" refUrl="https://nye.money" subType="COLLECT" ts="2025-06-10T16:02:34+05:30" type="CREDIT">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00206"/>
+		</RiskScores>
+		<Rules>
+			<Rule name="EXPIREAFTER" value="1440"/>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Resp reqMsgId="3L92O798CXU" result="SUCCESS">
+		<Ref IFSC="PPIW0885627" acNum="918093150354" accType="PPIWALLET" addr="8093150354@nye" approvalNum="979522" code="0000" orgAmount="1.07" regName="vishwajeet kumar" respCode="00" seqNum="1" settAmount="1.07" settCurrency="INR" type="PAYEE"/>
+	</Resp>
+</ns2:RespPay>
+==========
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="3L92O7993gg" orgId="NPCI" ts="2025-06-10T16:03:07+05:30" ver="2.0"/>
+	<Txn custRef="516116232358" id="RFPLa58e4a0a0a544ee1a7235e336e0e24b" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="823938" refUrl="https://nye.money" ts="2025-06-10T16:02:34+05:30" type="COLLECT">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00206"/>
+		</RiskScores>
+	</Txn>
+	<Resp reqMsgId="RFPa6a7ffd8913649b48dfa8b8d010defa8" result="SUCCESS">
+		<Ref IFSC="PPIW0885627" acNum="918093150354" accType="PPIWALLET" addr="8093150354@nye" approvalNum="979522" code="0000" orgAmount="1.07" regName="vishwajeet kumar" respCode="00" seqNum="1" settAmount="1.07" settCurrency="INR" type="PAYEE"/>
+		<Ref IFSC="SBIN0012576" acNum="00000036409226430" accType="SAVINGS" addr="7549180236@ybl" approvalNum="086891" code="0000" orgAmount="1.07" regName="VISHWAJEET  KUMAR" respCode="00" seqNum="1" settAmount="1.07" settCurrency="INR" type="PAYER"/>
+	</Resp>
+</ns2:RespPay>
+
+********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/">
+	<HeadmsgId="RFP3749a975e63049d59a8d61334130d0c9" orgId="189991" ts="2025-05-29T13:01:18+05:30" ver="2.0"/>
+	<Meta>
+		<Tag name="PAYREQSTART" value="2025-05-29T13:01:18+05:30"/>
+		<Tag name="PAYREQEND" value="2025-05-29T13:01:18+05:30"/>
+	</Meta>
+	<Txn custRef="514913182755" id="RFPL0b043732e432410a991c61c0afa89f1" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="442836" refUrl="https://nye.money" ts="2025-05-29T13:01:18+05:30" type="COLLECT">
+		<Rules>
+			<Rulename="EXPIREAFTER" value="1440"/>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="8356856558@mbk" code="0000" name="" seqNum="1" type="PERSON">
+		<Amount curr="INR" value="1000.00"/>
+	</Payer>
+	<Payees>
+		<Payee addr="7747970102@nye" code="0000" name="vedant jain " seqNum="1" type="PERSON">
+			<Info>
+				<Identity id="917747970102" type="ACCOUNT" verifiedName="vedant jain "/>
+				<Rating verifiedAddress="TRUE"/>
+			</Info>
+			<Device>
+				<Tag name="MOBILE" value="917747970102"/>
+				<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+				<Tag name="ID" value="917747970102"/>
+				<Tag name="OS" value="android"/>
+				<Tag name="IP" value="172.1.1.1"/>
+				<Tag name="APP" value="com.rapipay.nye"/>
+				<Tag name="LOCATION" value="25.4324038-77.6529899"/>
+				<Tag name="TYPE" value="MOB"/>
+				<Tag name="CAPABILITY" value="110010"/>
+			</Device>
+			<Ac addrType="ACCOUNT">
+				<Detail name="ACTYPE" value="PPIWALLET"/>
+				<Detail name="ACNUM" value="917747970102"/>
+				<Detail name="IFSC" value="PPIW0885627"/>
+			</Ac>
+			<Amount curr="INR" value="1000.00"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+===========
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="4YRy8JHnC9f" orgId="NPCI" ts="2025-05-29T13:01:46+05:30" ver="2.0"/>
+	<Meta>
+		<Tag name="PAYREQSTART" value="2025-05-29T13:01:18+05:30"/>
+		<Tag name="PAYREQEND" value="2025-05-29T13:01:18+05:30"/>
+	</Meta>
+	<Txn custRef="514913182755" id="RFPL0b043732e432410a991c61c0afa89f1" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="442836" refUrl="https://nye.money" subType="COLLECT" ts="2025-05-29T13:01:18+05:30" type="CREDIT">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00200"/>
+		</RiskScores>
+		<Rules>
+			<Rule name="EXPIREAFTER" value="1440"/>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="8356856558@mbk" code="0000" name="Punita Devi" seqNum="1" type="PERSON">
+		<Info>
+			<Identity id="67f22457020d383872f6c750" type="ACCOUNT" verifiedName="Punita Devi"/>
+			<Rating verifiedAddress="FALSE"/>
+		</Info>
+		<Device>
+			<Tag name="MOBILE" value="918356856558"/>
+			<Tag name="GEOCODE" value="19.1086655 ,73.0056472"/>
+			<Tag name="ID" value="ced07ee18f8962b8"/>
+			<Tag name="OS" value="Android 8.1.0"/>
+			<Tag name="IP" value="127.0.0.1"/>
+			<Tag name="APP" value="com.mobikwik_new"/>
+			<Tag name="TYPE" value="MOB"/>
+			<Tag name="CAPABILITY" value="5200000000000001"/>
+		</Device>
+		<Ac addrType="ACCOUNT">
+			<Detail name="IFSC" value="PPIW0881822"/>
+			<Detail name="ACNUM" value="918356856558"/>
+			<Detail name="ACTYPE" value="PPIWALLET"/>
+		</Ac>
+		<Amount curr="INR" value="1000.00"/>
+	</Payer>
+	<Payees>
+		<Payee addr="7747970102@nye" code="0000" name="vedant jain" seqNum="1" type="PERSON">
+			<Info>
+				<Identity id="917747970102" type="ACCOUNT" verifiedName="vedant jain "/>
+				<Rating verifiedAddress="TRUE"/>
+			</Info>
+			<Device>
+				<Tag name="MOBILE" value="917747970102"/>
+				<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+				<Tag name="ID" value="917747970102"/>
+				<Tag name="OS" value="android"/>
+				<Tag name="IP" value="172.1.1.1"/>
+				<Tag name="APP" value="com.rapipay.nye"/>
+				<Tag name="LOCATION" value="25.4324038-77.6529899"/>
+				<Tag name="TYPE" value="MOB"/>
+				<Tag name="CAPABILITY" value="110010"/>
+			</Device>
+			<Ac addrType="ACCOUNT">
+				<Detail name="ACTYPE" value="PPIWALLET"/>
+				<Detail name="ACNUM" value="917747970102"/>
+				<Detail name="IFSC" value="PPIW0885627"/>
+			</Ac>
+			<Amount curr="INR" value="1000.00"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+==========
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFPb271d4bb8f324af49ff8b632b15c13fa" orgId="189991" ts="2025-05-29T13:01:47+05:30" ver="2.0"/>
+	<Txn custRef="514913182755" id="RFPL0b043732e432410a991c61c0afa89f1" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="442836" refUrl="https://nye.money" subType="COLLECT" ts="2025-05-29T13:01:18+05:30" type="CREDIT">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00200"/>
+		</RiskScores>
+		<Rules>
+			<Rule name="EXPIREAFTER" value="1440"/>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Resp errCode="XQ" reqMsgId="4YRy8JHnC9f" result="FAILURE">
+		<Ref IFSC="PPIW0885627" acNum="917747970102" accType="PPIWALLET" addr="7747970102@nye" code="0000" regName="vedant jain" respCode="XQ" seqNum="1" settAmount="0.00" settCurrency="INR" type="PAYEE"/>
+	</Resp>
+</ns2:RespPay>
+==========
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="4YRy8JHo2B2" orgId="NPCI" ts="2025-05-29T13:01:47+05:30" ver="2.0"/>
+	<Txn custRef="514913182755" id="RFPL0b043732e432410a991c61c0afa89f1" initiationMode="00" note="COLLECT RAISED" purpose="00" refId="442836" refUrl="https://nye.money" ts="2025-05-29T13:01:18+05:30" type="COLLECT">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00200"/>
+		</RiskScores>
+	</Txn>
+	<Resp errCode="U31" reqMsgId="RFP3749a975e63049d59a8d61334130d0c9" result="FAILURE">
+		<Ref IFSC="PPIW0885627" acNum="917747970102" accType="PPIWALLET" addr="7747970102@nye" code="0000" orgAmount="1000.00" regName="vedant jain" respCode="XQ" seqNum="1" settAmount="0.00" settCurrency="INR" type="PAYEE"/>
+		<Ref IFSC="PPIW0881822" acNum="918356856558" accType="PPIWALLET" addr="8356856558@mbk" approvalNum="667907" code="0000" orgAmount="1000.00" regName="Punita Devi" respCode="00" seqNum="1" settAmount="0.00" settCurrency="INR" type="PAYER"/>
+	</Resp>
+</ns2:RespPay>

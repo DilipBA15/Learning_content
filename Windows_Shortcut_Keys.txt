@@ -1,0 +1,32 @@
+
+==============================
+✅ Windows Shortcuts (Useful Hotkeys)
+==============================
+
+Win + D        => Show Desktop / Restore Windows
+Win + E        => Open File Explorer
+Win + R        => Open Run dialog
+Win + X        => Open Power User menu (CMD, Disk Mgmt, etc.)
+Win + L        => Lock your PC
+Win + I        => Open Windows Settings
+Win + A        => Open Action Center (notifications + quick settings)
+Win + Tab      => Open Task View (virtual desktops)
+Alt + Tab      => Switch between open apps
+Ctrl + Shift + Esc => Open Task Manager
+Ctrl + C       => Copy
+Ctrl + V       => Paste
+Ctrl + X       => Cut
+Ctrl + Z       => Undo
+Win + S        => Open Windows Search
+Win + Shift + S => Take a screenshot (Snip & Sketch)
+Win + P        => Project screen (choose display mode)
+Win + . (period) => Open emoji picker 😊
+Win + Ctrl + D => Create a new virtual desktop
+Win + Ctrl + Left/Right => Switch virtual desktops
+Win + Left/Right Arrow => Snap windows to left/right
+Win + Up/Down Arrow => Maximize/Minimize windows
+
+Pro Tips:
+- Use `Alt + F4` to close the current window.
+- Use `Ctrl + A` to select all items.
+- Use `Ctrl + F` to search within files or web pages.

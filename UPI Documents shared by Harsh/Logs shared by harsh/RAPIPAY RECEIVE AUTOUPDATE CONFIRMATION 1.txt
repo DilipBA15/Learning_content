@@ -1,0 +1,265 @@
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP9ae82bbfd4fa42dfaa6e526c2febb2b2" orgId="189991" ts="2025-06-07T19:51:13+05:30" ver="2.0"/>
+	<Txn custRef="515819298337" id="RFPL88c7dca977364cbfaace772597d08ab" initiationMode="00" note="PAY" purpose="00" refId="610454" refUrl="https://nye.money" ts="2025-06-07T19:51:13+05:30" type="PAY">
+		<Rules>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="6207200453@nye" code="0000" name="VIKASH KUMAR" seqNum="1" type="PERSON">
+		<Info>
+			<Identity id="916207200453" type="ACCOUNT" verifiedName="VIKASH KUMAR"/>
+			<Rating verifiedAddress="TRUE"/>
+		</Info>
+		<Device>
+			<Tag name="MOBILE" value="916207200453"/>
+			<Tag name="TYPE" value="MOB"/>
+			<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+			<Tag name="ID" value="916207200453"/>
+			<Tag name="OS" value="android"/>
+			<Tag name="IP" value="172.1.1.1"/>
+			<Tag name="APP" value="com.rapipay.nye"/>
+			<Tag name="LOCATION" value="26.5275383-84.8902888"/>
+			<Tag name="CAPABILITY" value="011001"/>
+		</Device>
+		<Ac addrType="ACCOUNT">
+			<Detail name="ACTYPE" value="PPIWALLET"/>
+			<Detail name="ACNUM" value="916207200453"/>
+			<Detail name="IFSC" value="PPIW0885627"/>
+		</Ac>
+		<Creds>
+			<Cred subType="NA" type="PreApproved">
+				<Data code="" ki="">MDB8NjE3OTgx</Data>
+			</Cred>
+		</Creds>
+		<Amount curr="INR" value="4530.00"/>
+	</Payer>
+	<Payees>
+		<Payee addr="9939289052@airtel" code="0000" name="VIDYANAND SINGH" seqNum="1" type="PERSON">
+			<Amount curr="INR" value="4530.00"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+==============
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="3L92IThAnIA" orgId="NPCI" ts="2025-06-07T19:52:44+05:30" ver="2.0"/>
+	<Txn custRef="515819298337" id="RFPL88c7dca977364cbfaace772597d08ab" initiationMode="00" note="PAY" purpose="00" refId="610454" refUrl="https://nye.money" ts="2025-06-07T19:51:13+05:30" type="PAY">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00470"/>
+		</RiskScores>
+	</Txn>
+	<Resp reqMsgId="RFP9ae82bbfd4fa42dfaa6e526c2febb2b2" result="DEEMED">
+		<Ref IFSC="PPIW0885627" acNum="916207200453" accType="PPIWALLET" addr="6207200453@nye" approvalNum="617981" code="0000" orgAmount="4530.00" regName="VIKASH KUMAR" respCode="00" seqNum="1" settAmount="4530.00" settCurrency="INR" type="PAYER"/>
+		<Ref IFSC="AIRP0000001" acNum="9939289052" accType="SAVINGS" addr="9939289052@airtel" code="0000" orgAmount="4530.00" regName="VIDYANAND SINGH" respCode="BT" reversalRespCode="RB" seqNum="1" settAmount="4530.00" type="PAYEE"/>
+	</Resp>
+</ns2:RespPay>
+==========
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="2yKYlcuu4PU" orgId="NPCI" prodType="UPI" ts="2025-06-07T20:48:39+05:30" ver="2.0"/>
+	<Meta/>
+	<Txn custRef="515819298337" id="AUTO000000005v4vu0OoenAxE2nsXS0" initiationMode="00" note="AUTOUPDATE|RET|120" orgRespCode="RB" orgTxnAmt="4530.00" orgTxnId="RFPL88c7dca977364cbfaace772597d08ab" purpose="00" subType="DEBIT" ts="2025-06-07T19:51:13+05:30" type="REVERSAL"/>
+	<Payer addr="6207200453@nye" code="0000" name="VIKASH KUMAR" seqNum="1" type="PERSON">
+		<Info>
+			<Identity id="916207200453" type="ACCOUNT" verifiedName="VIKASH KUMAR"/>
+			<Rating verifiedAddress="TRUE"/>
+		</Info>
+		<Ac addrType="ACCOUNT">
+			<Detail name="ACTYPE" value="PPIWALLET"/>
+			<Detail name="ACNUM" value="916207200453"/>
+			<Detail name="IFSC" value="PPIW0885627"/>
+		</Ac>
+		<Amount curr="INR" value="4530.00"/>
+	</Payer>
+</ns2:ReqPay>
+=============
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP5b2920936a454479a79970857ad18ca4" orgId="189991" ts="2025-06-07T20:48:40+05:30" ver="2.0"/>
+	<Txn custRef="515819298337" id="AUTO000000005v4vu0OoenAxE2nsXS0" initiationMode="00" note="AUTOUPDATE|RET|120" orgRespCode="RB" orgTxnAmt="4530.00" orgTxnId="RFPL88c7dca977364cbfaace772597d08ab" purpose="00" subType="DEBIT" ts="2025-06-07T19:51:13+05:30" type="REVERSAL"/>
+	<Resp reqMsgId="2yKYlcuu4PU" result="SUCCESS">
+		<Ref IFSC="PPIW0885627" acNum="916207200453" accType="PPIWALLET" addr="6207200453@nye" approvalNum="362681" code="0000" orgAmount="4530.00" regName="VIKASH KUMAR" respCode="00" seqNum="1" settAmount="4530.00" settCurrency="INR" type="PAYER"/>
+	</Resp>
+</ns2:RespPay>
+=============
+<ns2:ReqTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="2yKYlcuuuVq" orgId="NPCI" ts="2025-06-07T20:48:40+05:30" ver="2.0"/>
+	<Txn custRef="515819298337" id="AUTO000000005v4vu0OoenAxE2nsXS0" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPL88c7dca977364cbfaace772597d08ab" purpose="00" refId="610454" refUrl="https://nye.money" ts="2025-06-07T19:51:13+05:30" type="TxnConfirmation"/>
+	<TxnConfirmation note="RET|120|RRC|501" orgStatus="FAILURE" type="PAY">
+		<Ref IFSC="PPIW0885627" acNum="916207200453" accType="PPIWALLET" addr="6207200453@nye" approvalNum="617981" code="0000" orgAmount="4530.00" regName="VIKASH KUMAR" respCode="00" seqNum="1" settAmount="4530.00" settCurrency="INR" type="PAYER"/>
+	</TxnConfirmation>
+</ns2:ReqTxnConfirmation>
+===============
+<ns2:RespTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP1c610e8ef7ea41dfba1ab47619aa0d8d" orgId="189991" ts="2025-06-07T20:48:40+05:30" ver="2.0"/>
+	<Txn custRef="515819298337" id="AUTO000000005v4vu0OoenAxE2nsXS0" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPL88c7dca977364cbfaace772597d08ab" purpose="00" refId="610454" refUrl="https://nye.money" ts="2025-06-07T19:51:13+05:30" type="TxnConfirmation"/>
+	<Resp reqMsgId="2yKYlcuuuVq" result="SUCCESS"/>
+</ns2:RespTxnConfirmation>
+
+
+*********************************************************************************************************************************************************************************
+
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP5cb69a5d583245e7804a2fa7b3a24aa2" orgId="189991" ts="2025-06-14T20:25:42+05:30" ver="2.0"/>
+	<Txn custRef="516520339555" id="RFPL5c8254c4196544aca31306779119374" initiationMode="00" note="PAY" purpose="00" refId="703908" refUrl="https://nye.money" ts="2025-06-14T20:25:42+05:30" type="PAY">
+		<Rules>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="8103250006@nye" code="0000" name="NITESH KUMAR" seqNum="1" type="PERSON">
+		<Info>
+			<Identity id="918103250006" type="ACCOUNT" verifiedName="NITESH KUMAR"/>
+			<Rating verifiedAddress="TRUE"/>
+		</Info>
+		<Device>
+			<Tag name="MOBILE" value="918103250006"/>
+			<Tag name="TYPE" value="MOB"/>
+			<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+			<Tag name="ID" value="918103250006"/>
+			<Tag name="OS" value="android"/>
+			<Tag name="IP" value="172.1.1.1"/>
+			<Tag name="APP" value="com.rapipay.nye"/>
+			<Tag name="LOCATION" value="21.2263004-81.4014916"/>
+			<Tag name="CAPABILITY" value="011001"/>
+		</Device>
+		<Ac addrType="ACCOUNT">
+			<Detail name="ACTYPE" value="PPIWALLET"/>
+			<Detail name="ACNUM" value="918103250006"/>
+			<Detail name="IFSC" value="PPIW0885627"/>
+		</Ac>
+		<Creds>
+			<Cred subType="NA" type="PreApproved">
+				<Data code="" ki="">MDB8NjgxMTM4</Data>
+			</Cred>
+		</Creds>
+		<Amount curr="INR" value="7000.00"/>
+	</Payer>
+	<Payees>
+		<Payee addr="priyanka13456789@okicici" code="0000" name="PRINCE KUMAR" seqNum="1" type="PERSON">
+			<Amount curr="INR" value="7000.00"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+=================
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="3LAZ59nnhaC" orgId="NPCI" ts="2025-06-14T20:27:12+05:30" ver="2.0"/>
+	<Txn custRef="516520339555" id="RFPL5c8254c4196544aca31306779119374" initiationMode="00" note="PAY" purpose="00" refId="703908" refUrl="https://nye.money" ts="2025-06-14T20:25:42+05:30" type="PAY">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00356"/>
+		</RiskScores>
+	</Txn>
+	<Resp reqMsgId="RFP5cb69a5d583245e7804a2fa7b3a24aa2" result="DEEMED">
+		<Ref IFSC="PPIW0885627" acNum="918103250006" accType="PPIWALLET" addr="8103250006@nye" approvalNum="681138" code="0000" orgAmount="7000.00" regName="NITESH KUMAR" respCode="00" seqNum="1" settAmount="7000.00" settCurrency="INR" type="PAYER"/>
+		<Ref IFSC="BKID0004894" acNum="489410110005089" accType="SAVINGS" addr="priyanka13456789@okicici" code="0000" orgAmount="7000.00" regName="PRINCE KUMAR" respCode="BT" reversalRespCode="RB" seqNum="1" settAmount="7000.00" type="PAYEE"/>
+	</Resp>
+</ns2:RespPay>
+===========
+<ns2:ReqTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="2yKYxwzolpl" orgId="NPCI" ts="2025-06-14T20:48:19+05:30" ver="2.0"/>
+	<Txn custRef="516520339555" id="AUTO000000005v4vu1jnXntK4aqjO7o" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPL5c8254c4196544aca31306779119374" purpose="00" refId="703908" refUrl="https://nye.money" ts="2025-06-14T20:25:42+05:30" type="TxnConfirmation"/>
+	<TxnConfirmation note="TCC|102" orgStatus="SUCCESS" type="PAY">
+		<Ref IFSC="PPIW0885627" acNum="918103250006" accType="PPIWALLET" addr="8103250006@nye" approvalNum="681138" code="0000" orgAmount="7000.00" regName="NITESH KUMAR" respCode="00" seqNum="1" settAmount="7000.00" settCurrency="INR" type="PAYER"/>
+	</TxnConfirmation>
+</ns2:ReqTxnConfirmation>
+===============
+<ns2:RespTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP5e41580a95644e54a48e1d8e51858440" orgId="189991" ts="2025-06-14T20:48:19+05:30" ver="2.0"/>
+	<Txn custRef="516520339555" id="AUTO000000005v4vu1jnXntK4aqjO7o" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPL5c8254c4196544aca31306779119374" purpose="00" refId="703908" refUrl="https://nye.money" ts="2025-06-14T20:25:42+05:30" type="TxnConfirmation"/>
+	<Resp reqMsgId="2yKYxwzolpl" result="SUCCESS"/>
+</ns2:RespTxnConfirmation>
+===============
+<ns2:ReqTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="2yKYxwzolpn" orgId="NPCI" ts="2025-06-14T20:48:19+05:30" ver="2.0"/>
+	<Txn custRef="516520339555" id="AUTO000000005v4vu1jnXntK4aqjO7o" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPL5c8254c4196544aca31306779119374" purpose="00" refId="703908" refUrl="https://nye.money" ts="2025-06-14T20:25:42+05:30" type="TxnConfirmation"/>
+	<TxnConfirmation note="TCC|102" orgStatus="SUCCESS" type="PAY">
+		<Ref IFSC="PPIW0885627" acNum="918103250006" accType="PPIWALLET" addr="8103250006@nye" approvalNum="681138" code="0000" orgAmount="7000.00" regName="NITESH KUMAR" respCode="00" seqNum="1" settAmount="7000.00" settCurrency="INR" type="PAYER"/>
+	</TxnConfirmation>
+</ns2:ReqTxnConfirmation>
+==================
+<ns2:RespTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFPbdc857b092d14a2d8d1faa0460ccbdee" orgId="189991" ts="2025-06-14T20:48:19+05:30" ver="2.0"/>
+	<Txn custRef="516520339555" id="AUTO000000005v4vu1jnXntK4aqjO7o" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPL5c8254c4196544aca31306779119374" purpose="00" refId="703908" refUrl="https://nye.money" ts="2025-06-14T20:25:42+05:30" type="TxnConfirmation"/>
+	<Resp reqMsgId="2yKYxwzolpn" result="SUCCESS"/>
+</ns2:RespTxnConfirmation>
+
+*********************************************************************************************************************************************************************************
+
+<ns2:ReqPay xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP0caca2228e114d57b4b0a49712150804" orgId="189991" ts="2025-06-15T18:05:39+05:30" ver="2.0"/>
+	<Txn custRef="516618343874" id="RFPLda7766ca45d04e32a6d75b686224abf" initiationMode="00" note="PAY" purpose="00" refId="859080" refUrl="https://nye.money" ts="2025-06-15T18:05:39+05:30" type="PAY">
+		<Rules>
+			<Rule name="MINAMOUNT" value="1.00"/>
+		</Rules>
+	</Txn>
+	<Payer addr="7988732579@nye" code="0000" name="muskan " seqNum="1" type="PERSON">
+		<Info>
+			<Identity id="917988732579" type="ACCOUNT" verifiedName="muskan "/>
+			<Rating verifiedAddress="TRUE"/>
+		</Info>
+		<Device>
+			<Tag name="MOBILE" value="917988732579"/>
+			<Tag name="TYPE" value="MOB"/>
+			<Tag name="GEOCODE" value="17.5221503,78.3045558"/>
+			<Tag name="ID" value="917988732579"/>
+			<Tag name="OS" value="android"/>
+			<Tag name="IP" value="172.1.1.1"/>
+			<Tag name="APP" value="com.rapipay.nye"/>
+			<Tag name="LOCATION" value="27.9032-77.1750517"/>
+			<Tag name="CAPABILITY" value="011001"/>
+		</Device>
+		<Ac addrType="ACCOUNT">
+			<Detail name="ACTYPE" value="PPIWALLET"/>
+			<Detail name="ACNUM" value="917988732579"/>
+			<Detail name="IFSC" value="PPIW0885627"/>
+		</Ac>
+		<Creds>
+			<Cred subType="NA" type="PreApproved">
+				<Data code="" ki="">MDB8NDE3Njg5</Data>
+			</Cred>
+		</Creds>
+		<Amount curr="INR" value="1.00"/>
+	</Payer>
+	<Payees>
+		<Payee addr="muskan133@naviaxis" code="0000" name="MUSKAN" seqNum="1" type="PERSON">
+			<Amount curr="INR" value="1.00"/>
+		</Payee>
+	</Payees>
+</ns2:ReqPay>
+===============
+<ns2:RespPay xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="3NFe0zJlclJ" orgId="NPCI" ts="2025-06-15T18:06:40+05:30" ver="2.0"/>
+	<Txn custRef="516618343874" id="RFPLda7766ca45d04e32a6d75b686224abf" initiationMode="00" note="PAY" purpose="00" refId="859080" refUrl="https://nye.money" ts="2025-06-15T18:05:39+05:30" type="PAY">
+		<RiskScores>
+			<Score provider="NPCI" type="TXNRISK" value="00206"/>
+		</RiskScores>
+	</Txn>
+	<Resp reqMsgId="RFP0caca2228e114d57b4b0a49712150804" result="DEEMED">
+		<Ref IFSC="PPIW0885627" acNum="917988732579" accType="PPIWALLET" addr="7988732579@nye" approvalNum="417689" code="0000" orgAmount="1.00" regName="muskan " respCode="00" seqNum="1" settAmount="1.00" settCurrency="INR" type="PAYER"/>
+		<Ref IFSC="BARB0DEEGXX" acNum="39040100015411" accType="SAVINGS" addr="muskan133@naviaxis" code="0000" orgAmount="1.00" regName="MUSKAN" respCode="BT" reversalRespCode="96" seqNum="1" settAmount="1.00" type="PAYEE"/>
+	</Resp>
+</ns2:RespPay>
+============
+<ns2:ReqTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="2yKYzfwHfds" orgId="NPCI" ts="2025-06-15T18:46:03+05:30" ver="2.0"/>
+	<Txn custRef="516618343874" id="AUTO000000005v4vu1jnXntMjmBLPgQ" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPLda7766ca45d04e32a6d75b686224abf" purpose="00" refId="859080" refUrl="https://nye.money" ts="2025-06-15T18:05:39+05:30" type="TxnConfirmation"/>
+	<TxnConfirmation note="TCC|103" orgStatus="SUCCESS" type="PAY">
+		<Ref IFSC="PPIW0885627" acNum="917988732579" accType="PPIWALLET" addr="7988732579@nye" approvalNum="417689" code="0000" orgAmount="1.00" regName="muskan " respCode="00" seqNum="1" settAmount="1.00" settCurrency="INR" type="PAYER"/>
+	</TxnConfirmation>
+</ns2:ReqTxnConfirmation>
+=========
+<ns2:RespTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFPba246a52569141bda15925919f9eafda" orgId="189991" ts="2025-06-15T18:46:04+05:30" ver="2.0"/>
+	<Txn custRef="516618343874" id="AUTO000000005v4vu1jnXntMjmBLPgQ" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPLda7766ca45d04e32a6d75b686224abf" purpose="00" refId="859080" refUrl="https://nye.money" ts="2025-06-15T18:05:39+05:30" type="TxnConfirmation"/>
+	<Resp reqMsgId="2yKYzfwHfds" result="SUCCESS"/>
+</ns2:RespTxnConfirmation>
+===========
+<ns2:ReqTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/" xmlns:ns3="http://npci.org/cm/schema/">
+	<Head msgId="2yKYzfwHfdu" orgId="NPCI" ts="2025-06-15T18:46:03+05:30" ver="2.0"/>
+	<Txn custRef="516618343874" id="AUTO000000005v4vu1jnXntMjmBLPgQ" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPLda7766ca45d04e32a6d75b686224abf" purpose="00" refId="859080" refUrl="https://nye.money" ts="2025-06-15T18:05:39+05:30" type="TxnConfirmation"/>
+	<TxnConfirmation note="TCC|103" orgStatus="SUCCESS" type="PAY">
+		<Ref IFSC="PPIW0885627" acNum="917988732579" accType="PPIWALLET" addr="7988732579@nye" approvalNum="417689" code="0000" orgAmount="1.00" regName="muskan " respCode="00" seqNum="1" settAmount="1.00" settCurrency="INR" type="PAYER"/>
+	</TxnConfirmation>
+</ns2:ReqTxnConfirmation>
+==============
+<ns2:RespTxnConfirmation xmlns:ns2="http://npci.org/upi/schema/">
+	<Head msgId="RFP3f991f512a7748ccb1cd3b32a7acf842" orgId="189991" ts="2025-06-15T18:46:04+05:30" ver="2.0"/>
+	<Txn custRef="516618343874" id="AUTO000000005v4vu1jnXntMjmBLPgQ" initiationMode="00" note="AUTOUPDATE" orgTxnId="RFPLda7766ca45d04e32a6d75b686224abf" purpose="00" refId="859080" refUrl="https://nye.money" ts="2025-06-15T18:05:39+05:30" type="TxnConfirmation"/>
+	<Resp reqMsgId="2yKYzfwHfdu" result="SUCCESS"/>
+</ns2:RespTxnConfirmation>
